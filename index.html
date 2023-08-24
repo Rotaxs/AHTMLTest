@@ -1,27 +1,142 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <style type="text/css">
-            body {
-                background-color: black;
-            }
-            p {
-                font-size: 40px;
-                font-family: kaiti;
-                color:white;
-                text-align: center;
-            }
-        </style>    
-    </head>
-    <body>
-        <div style="text-align: center;">
-            <img src="./assets/head.jpg" height="50%">
-        </div>>
-        <hr>
-        <p>你被骗了[doge]</p>
-        <hr>
-        <div style="text-align: center;">
-            <a href="" style="font-size: 20px;">bilibili</a>
+<head>
+    <title>链接卡片</title>
+    <style>
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 300px;
+            margin: 10px;
+            display: inline-block;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+
+        .container {
+            padding: 2px 16px;
+        }
+
+        .baidu {
+            background: linear-gradient(to right, #F44336, #9C27B0);
+        }
+
+        .bilibili {
+            background: linear-gradient(to right, #4CAF50, #2196F3);
+        }
+
+        .yandex {
+            background: linear-gradient(to right, #2196F3, #FFC107);
+        }
+
+        .swisscows {
+            background: linear-gradient(to right, #FFC107, #9C27B0);
+        }
+
+        .github {
+            background: linear-gradient(to right, #9C27B0, #F44336);
+        }
+
+        .newbing {
+            background: linear-gradient(to right, #FF9800, #4CAF50);
+        }
+
+        .card-link {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .card-link:hover .card {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+
+        .container h4 {
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            color: white;
+        }
+
+        .container p {
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            color: white;
+        }
+
+        h1 {
+            font-family: Arial, sans-serif;
+            font-size: 36px;
+            color: blue;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>选择一个网站</h1>
+
+    <a href="https://www.baidu.com" target="_blank" class="card-link">
+        <div class="card baidu">
+            <div class="container">
+                <h4><b>百度</b></h4>
+                <p>百度一下</p>
+            </div>
         </div>
-    </body>
+    </a>
+
+    <a href="https://www.bilibili.com" target="_blank" class="card-link">
+        <div class="card bilibili">
+            <div class="container">
+                <h4><b>B站</b></h4>
+                <p>全球最大的弹幕视频网站</p>
+            </div>
+        </div>
+    </a>
+
+    <a href="https://www.yandex.com" target="_blank" class="card-link">
+        <div class="card yandex">
+            <div class="container">
+                <h4><b>Yandex</b></h4>
+                <p>俄罗斯的一个搜索引擎</p>
+            </div>
+        </div>
+    </a>
+
+    <a href="https://www.swisscows.com" target="_blank" class="card-link">
+        <div class="card swisscows">
+            <div class="container">
+                <h4><b>Swisscows</b></h4>
+                <p>瑞典的一个搜索引擎</p>
+            </div>
+        </div>
+    </a>
+
+    <a href="https://www.github.com" target="_blank" class="card-link">
+        <div class="card github">
+            <div class="container">
+                <h4><b>Github</b></h4>
+                <p>全球最大的同性交友网站</p>
+            </div>
+        </div>
+    </a>
+
+    <a href="https://hellobox-bing.hf.space/web/#/" target="_blank" class="card-link">
+        <div class="card newbing">
+            <div class="container">
+                <h4><b>NewBing</b></h4>
+                <p>NewBing镜像</p>
+            </div>
+        </div>
+    </a>
+
+    <script type="text/javascript">
+      document.querySelectorAll('.card-link').forEach(function(cardLink) {
+          cardLink.addEventListener('click', function(event) {
+              event.preventDefault();
+              window.open(cardLink.href, cardLink.target);
+          });
+      });
+    </script>
+
+</body>
 </html>
